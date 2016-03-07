@@ -1,0 +1,101 @@
+C:\wamp\www\Sandbox\nodejs\Demo-05>set NODE_DEBUG="http net"
+
+C:\wamp\www\Sandbox\nodejs\Demo-05>node server.js
+NET 7228: listen2 null 1337 4 false
+NET 7228: _listen2: create a handle
+NET 7228: bind to anycast
+NET 7228: onconnection
+NET 7228: _read
+NET 7228: Socket._read readStart
+HTTP 7228: SERVER new http connection
+NET 7228: onread 445
+NET 7228: got data
+HTTP 7228: SERVER socketOnData 445
+HTTP 7228: parserOnHeadersComplete { headers:
+   [ 'Host',
+     '127.0.0.1:1337',
+     'Connection',
+     'keep-alive',
+     'Cache-Control',
+     'max-age=0',
+     'Accept',
+     'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+     'Upgrade-Insecure-Requests',
+     '1',
+     'User-Agent',
+     'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36',
+     'Accept-Encoding',
+     'gzip, deflate, sdch',
+     'Accept-Language',
+     'ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4' ],
+  url: '/echo?message=log_me_please',
+  method: 1,
+  versionMajor: 1,
+  versionMinor: 1,
+  shouldKeepAlive: true,
+  upgrade: false }
+2016-03-07T13:37:18.957Z - info: Got request GET /echo?message=log_me_please
+HTTP 7228: write ret = true
+HTTP 7228: outgoing message end.
+NET 7228: _read
+NET 7228: onconnection
+NET 7228: _read
+NET 7228: Socket._read readStart
+HTTP 7228: SERVER new http connection
+NET 7228: afterWrite 0
+NET 7228: afterWrite call cb
+NET 7228: onread -4095
+NET 7228: EOF
+NET 7228: onSocketEnd { objectMode: false,
+  highWaterMark: 16384,
+  buffer: [],
+  length: 0,
+  pipes: null,
+  pipesCount: 0,
+  flowing: true,
+  ended: true,
+  endEmitted: false,
+  reading: false,
+  sync: false,
+  needReadable: false,
+  emittedReadable: false,
+  readableListening: false,
+  defaultEncoding: 'utf8',
+  ranOut: false,
+  awaitDrain: 0,
+  readingMore: false,
+  decoder: null,
+  encoding: null,
+  resumeScheduled: false }
+NET 7228: onSocketFinish
+NET 7228: oSF: ended, destroy { objectMode: false,
+  highWaterMark: 16384,
+  buffer: [],
+  length: 0,
+  pipes: null,
+  pipesCount: 0,
+  flowing: true,
+  ended: true,
+  endEmitted: true,
+  reading: false,
+  sync: false,
+  needReadable: false,
+  emittedReadable: false,
+  readableListening: false,
+  defaultEncoding: 'utf8',
+  ranOut: false,
+  awaitDrain: 0,
+  readingMore: false,
+  decoder: null,
+  encoding: null,
+  resumeScheduled: false }
+NET 7228: destroy undefined
+NET 7228: destroy
+NET 7228: close
+NET 7228: close handle
+NET 7228: has server
+NET 7228: SERVER _emitCloseIfDrained
+NET 7228: SERVER handle? true   connections? 1
+NET 7228: emit close
+HTTP 7228: server socket close
+

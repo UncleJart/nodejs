@@ -1,0 +1,6 @@
+C:\wamp\www\Sandbox\nodejs\Demo-04>set DEBUG=server,server:*
+
+C:\wamp\www\Sandbox\nodejs\Demo-04>node server.js
+  server Server is running +0ms
+  server:request Got request +8s GET /echo?message=TEST
+  server:request EchoTEST +7ms
