@@ -3,7 +3,7 @@ var fs = require('fs');
 var url = require('url');
 var path = require('path');
 
-var root = __dirname + "/public";
+var ROOT = __dirname + "\\public";
 
 http.createServer(function(req,res){
 
@@ -37,13 +37,15 @@ function sendFileSafe(filePath, res){
 		return;
 	}
 
-	filepath = path.normalize(path.join(ROOT, filePath));
+	filePath = path.normalize(path.join(ROOT, filePath));
 
 	if(filePath.indexOf(ROOT) != 0){
 		res.statusCode = 404;
 		res.end("File not found!");
 		return;
 	}
+
+	console.log(filePath);
 
 	fs.stat(filePath,function(err,stats){
 		if(err || !stats.isFile()){
@@ -57,9 +59,9 @@ function sendFileSafe(filePath, res){
 
 }
 
-function sendFile(filePath, res){
+function sendFile(filePath, res){ //некорректно
 
-	fs.readFile(filePath,function(err,context){
+	fs.readFile(filePath,function(err,content){
 		if(err) throw err;
 
 		var mime = require('mime').lookup(filePath); // npm install mime
